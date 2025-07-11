@@ -1,23 +1,9 @@
 {
   "version": 2,
-  "framework": "remix",
-  "buildCommand": "npm run build",
-  "devCommand": "npm run dev",
-  "installCommand": "npm install",
-  "outputDirectory": "build",
-  "routes": [
+  "builds": [
     {
-      "src": "/build/(.*)",
-      "dest": "/build/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.js"
+      "src": "package.json",
+      "use": "@vercel/remix"
     }
-  ],
-  "functions": {
-    "app/entry.server.tsx": {
-      "includeFiles": "build/**"
-    }
-  }
+  ]
 }
