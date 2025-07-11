@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "framework": "remix",
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "outputDirectory": "build",
+  "routes": [
+    {
+      "src": "/build/(.*)",
+      "dest": "/build/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"
+    }
+  ],
+  "functions": {
+    "app/entry.server.tsx": {
+      "includeFiles": "build/**"
+    }
+  }
+}

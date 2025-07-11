@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-shadow-50 text-shadow-900;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-lg;
+  }
+  
+  .card-shadow {
+    @apply shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-shadow duration-300;
+  }
+  
+  .focus-ring {
+    @apply ring-2 ring-focus-500 ring-offset-2 ring-offset-shadow-50;
+  }
+  
+  .btn-primary {
+    @apply bg-focus-600 hover:bg-focus-600 text-white font-medium px-6 py-2.5 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-focus-500 focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-shadow-100 hover:bg-shadow-200 text-shadow-800 font-medium px-6 py-2.5 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-shadow-500 focus:ring-offset-2;
+  }
+  
+  .btn-danger {
+    @apply bg-danger-600 hover:bg-danger-600 text-white font-medium px-6 py-2.5 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-danger-500 focus:ring-offset-2;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg border border-shadow-300 focus:border-focus-500 focus:ring-2 focus:ring-focus-500 focus:ring-offset-2 transition-colors duration-200 bg-white placeholder-shadow-400;
+  }
+  
+  .priority-1 {
+    @apply bg-shadow-100 text-shadow-600 border-shadow-200;
+  }
+  
+  .priority-2 {
+    @apply bg-blue-50 text-blue-700 border-blue-200;
+  }
+  
+  .priority-3 {
+    @apply bg-warning-50 text-warning-700 border-warning-200;
+  }
+  
+  .priority-4 {
+    @apply bg-orange-50 text-orange-700 border-orange-200;
+  }
+  
+  .priority-5 {
+    @apply bg-danger-50 text-danger-700 border-danger-200;
+  }
+}
