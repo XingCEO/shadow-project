@@ -2,8 +2,16 @@
   "version": 2,
   "builds": [
     {
-      "src": "package.json",
-      "use": "@vercel/remix"
+      "src": "server-vercel.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -13,7 +21,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "/server-vercel.js"
     }
   ]
 }
